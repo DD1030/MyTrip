@@ -90,6 +90,15 @@
             android:hint="Select Place"
             android:textColor="?attr/editTextColor" />
 
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="선택"
+            android:textColor="#ffffff"
+            android:onClick="showDatePickerDialog"
+            android:id="@+id/btn_place"
+            android:background="@color/colorPrimary"/>
+
     </LinearLayout>
 
     <Button

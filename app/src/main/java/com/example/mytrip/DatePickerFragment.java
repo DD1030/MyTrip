@@ -39,7 +39,11 @@ public class DatePickerFragment extends DialogFragment implements DatePickerDial
         // Create a new instance of DatePickerDialog and return it
         return new DatePickerDialog(getActivity(), this, year, month, day);
     }
+
+
+    //데이터 전송
     public void onDateSet(DatePicker view, int year, int month, int day) {
+
         TextView tripdate = (TextView) getActivity().findViewById(R.id.tripdate);
         tripdate.setText("Year: "+view.getYear()+" Month: "+view.getMonth()+" Day: "+view.getDayOfMonth());
     }

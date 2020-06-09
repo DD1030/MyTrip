@@ -13,18 +13,30 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import java.util.Date;
+import java.util.List;
+import java.util.Map;
 
 
 public class AddNewTripActivity extends AppCompatActivity {
 
-    private Button btn_date;
+    private Button btn_place;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_new_trip);
+
+        btn_place = findViewById(R.id.btn_place);
+        btn_place.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(AddNewTripActivity.this, PlaceList.class);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override
@@ -55,6 +67,8 @@ public class AddNewTripActivity extends AppCompatActivity {
         DialogFragment newFragment = new DatePickerFragment();
         newFragment.show(getSupportFragmentManager(), "datePicker");
     }
+
+
 
 
 
